@@ -1,4 +1,4 @@
-/* --- GATES FOUNDATION PALETTE & SMOOTH LOAD --- */
+/* --- FOUNDATION BRANDING --- */
 :root {
     --gates-blue: #185abc;
     --gates-dark-blue: #002f6c;
@@ -10,36 +10,35 @@
     --border: #dadce0;
 }
 
-/* --- SMOOTH ENTRY ANIMATION --- */
+/* --- THE FIX: INITIAL STATE --- */
 body {
-    opacity: 0;
-    filter: blur(10px);
-    transition: opacity 0.8s ease-out, filter 1.2s ease-out;
+    margin: 0;
+    opacity: 0; /* Page starts invisible */
+    filter: blur(8px); /* Page starts blurry */
+    transition: opacity 0.6s ease-in-out, filter 0.8s ease-in-out;
     font-family: 'Noto Sans', sans-serif;
     color: var(--text-main);
-    line-height: 1.6;
     background-color: var(--white);
-    margin: 0;
+    line-height: 1.6;
 }
 
+/* THE FIX: REVEAL STATE (Triggered by JS) */
 body.loaded {
     opacity: 1;
     filter: blur(0);
 }
 
-/* --- BASE STYLES --- */
-* { box-sizing: border-box; }
-
-h1, h2, h3 {
-    font-family: 'Noto Serif', serif;
-    font-weight: 700;
-    color: var(--gates-dark-blue);
-}
-
+/* --- LAYOUT --- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
+}
+
+h1, h2, h3 {
+    font-family: 'Noto Serif', serif;
+    color: var(--gates-dark-blue);
+    margin-top: 0;
 }
 
 /* --- NAVIGATION --- */
@@ -61,54 +60,61 @@ h1, h2, h3 {
 
 .logo {
     font-weight: 700;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--gates-blue);
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .logo span {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: var(--text-light);
+    letter-spacing: 1px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-main);
     font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    transition: color 0.2s;
 }
 
-.nav-links a.active { color: var(--gates-blue); }
-
-/* --- HERO & CONTENT --- */
-.hero {
-    background-color: var(--gates-dark-blue);
-    color: var(--white);
-    padding: 120px 0;
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gates-blue);
 }
 
-.hero h1 { color: var(--white); font-size: 3.5rem; margin-bottom: 24px; }
-
+/* --- BUTTONS --- */
 .btn-primary {
     display: inline-block;
     background-color: var(--gates-blue);
     color: var(--white);
-    padding: 16px 32px;
+    padding: 14px 28px;
     text-decoration: none;
     font-weight: 700;
     border-radius: 4px;
+    transition: background 0.2s;
 }
 
-/* --- GRANTS PAGE SPECIFICS --- */
-.grant-header { background: var(--gray-bg); padding: 60px 0; border-bottom: 1px solid var(--border); }
-.grant-container { display: grid; grid-template-columns: 1fr 350px; gap: 60px; margin-top: 40px; }
-.sidebar { background: var(--white); border: 1px solid var(--border); padding: 30px; border-radius: 8px; height: fit-content; }
+.btn-primary:hover {
+    background-color: var(--gates-dark-blue);
+}
 
-footer { background: var(--gates-dark-blue); color: var(--white); padding: 60px 0; margin-top: 80px; text-align: center; }
+/* --- FOOTER --- */
+footer {
+    background: var(--gates-dark-blue);
+    color: var(--white);
+    padding: 40px 0;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+}
