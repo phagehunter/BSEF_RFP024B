@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFP #024B: Rapid Diagnostics | BESF</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific overrides for the Grants Page layout */
+        .grant-header {
+            background: var(--gray-bg);
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .grant-container {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        .sidebar {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding: 30px;
+            border-radius: 8px;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+        .sidebar h4 {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        .sidebar p {
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--gates-dark-blue);
+        }
+        .main-content h3 {
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--gates-light-blue);
+        }
+        .main-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .main-content li {
+            margin-bottom: 10px;
+        }
+        @media (max-width: 1024px) {
+            .grant-container { grid-template-columns: 1fr; }
+            .sidebar { position: static; order: -1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">BLEEDING EDGE <span>Scientific Foundation</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="grants.html" class="active">Grant Opportunities</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="grant-header">
+        <div class="container">
+            <p style="color: var(--gates-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">Request for Proposals</p>
+            <h1 style="font-size: 2.5rem;">Rapid Diagnostics Testing in Rural or Remote Regions</h1>
+        </div>
+    </header>
+
+    <div class="container grant-container">
+        <main class="main-content">
+            <section id="overview">
+                <h3>Overview</h3>
+                <p>There is a critical lack of access to emerging healthcare technologies to address rapid diagnostic testing for refugee and displaced populations, particularly in rural or remote areas. According to the WHO, 1 in 8 people are currently on the move globally, and host communities are often unequipped to meet their unique health needs.</p>
+                <p>The <strong>Bleeding Edge Scientific Foundation (BESF)</strong> aims to accelerate the deployment of new technologies to prevent disease in these vulnerable populations and promote global health security.</p>
+            </section>
+
+            <section id="objectives">
+                <h3>Technical Objectives</h3>
+                <ul>
+                    <li><strong>API Integration:</strong> Proposals must demonstrate standardized real-time data sharing with global health security networks.</li>
+                    <li><strong>LMIC Manufacturing:</strong> Priority is given to sustainable production models within Low- and Middle-Income Countries.</li>
+                    <li><strong>7-1-7 Framework:</strong> Alignment with the 7-1-7 framework for detection and response is mandatory.</li>
+                </ul>
+            </section>
+
+            <section id="eligibility">
+                <h3>Eligibility & Guidance</h3>
+                <p>This RFP is open to non-profits, academic institutions, and technical partners. We prioritize projects that demonstrate equitable access for 501(c)(3) organizations and humanitarian groups.</p>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <h4>RFP Number</h4>
+            <p>#024B</p>
+
+            <h4>Application Deadline</h4>
+            <p>August 1, 2026<br><small>11:59 PM Eastern Time</small></p>
+
+            <h4>Award Amount</h4>
+            <p>Up to $1,500,000 USD</p>
+
+            <h4>Timeline</h4>
+            <p>Review: Sept - Oct 2026<br>Awards: Jan 2027</p>
+
+            <a href="#" class="btn-primary" style="display: block; text-align: center;">Apply Online</a>
+            <a href="BESF_RFP024B_20250506.pdf" download style="display: block; text-align: center; margin-top: 15px; font-weight: 700; text-decoration: none; color: var(--gates-blue);">Download RFP PDF</a>
+        </aside>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bleeding Edge Scientific Foundation. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
