@@ -7,20 +7,15 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
     <style>
-        /* Specific overrides for the Grants Page layout */
-        .grant-header {
-            background: var(--gray-bg);
-            padding: 60px 0;
-            border-bottom: 1px solid var(--border);
-        }
+        /* Grants Page Specific Layout */
         .grant-container {
             display: grid;
             grid-template-columns: 1fr 350px;
             gap: 60px;
-            margin-top: 40px;
+            padding: 60px 0;
         }
         .sidebar {
-            background: var(--white);
+            background: var(--gray-bg);
             border: 1px solid var(--border);
             padding: 30px;
             border-radius: 8px;
@@ -28,29 +23,9 @@
             position: sticky;
             top: 100px;
         }
-        .sidebar h4 {
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-bottom: 5px;
-        }
-        .sidebar p {
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: var(--gates-dark-blue);
-        }
-        .main-content h3 {
-            margin: 40px 0 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid var(--gates-light-blue);
-        }
-        .main-content ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-        .main-content li {
-            margin-bottom: 10px;
-        }
+        .sidebar h4 { text-transform: uppercase; font-size: 0.75rem; color: var(--text-light); margin-bottom: 5px; }
+        .sidebar p { font-weight: 700; margin-bottom: 20px; color: var(--gates-dark-blue); }
+        
         @media (max-width: 1024px) {
             .grant-container { grid-template-columns: 1fr; }
             .sidebar { position: static; order: -1; }
@@ -64,16 +39,16 @@
             <div class="logo">BLEEDING EDGE <span>Scientific Foundation</span></div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="grants.html" class="active">Grant Opportunities</a></li>
+                <li><a href="grants.html">Grant Opportunities</a></li>
                 <li><a href="https://phagehunter.github.io/">Hoffmann Work Portfolio</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="grant-header">
+    <header class="hero" style="padding: 60px 0;">
         <div class="container">
             <p style="color: var(--gates-blue); font-weight: 700; text-transform: uppercase; margin-bottom: 10px;">Request for Proposals</p>
-            <h1 style="font-size: 2.5rem;">Rapid Diagnostics in Rural and Remote Regions</h1>
+            <h1>Rapid Diagnostics in Rural and Remote Regions</h1>
         </div>
     </header>
 
@@ -81,40 +56,29 @@
         <main class="main-content">
             <section id="overview">
                 <h3>Overview</h3>
-                <p>There is a critical lack of access to emerging healthcare technologies to address rapid diagnostic testing for refugee and displaced populations, particularly in rural or remote areas. According to the WHO, 1 in 8 people are currently on the move globally, and host communities are often unequipped to meet their unique health needs.</p>
-                <p>The <strong>Bleeding Edge Scientific Foundation (BESF)</strong> aims to accelerate the deployment of new technologies to prevent disease in these vulnerable populations and promote global health security.</p>
+                <p>The Bleeding Edge Scientific Foundation (BESF) is addressing the critical lack of access to emerging healthcare technologies for rapid diagnostic testing among refugee and displaced populations.</p>
+                <p>As 1 in 8 people are currently on the move globally, host communities are often unequipped to meet these specific health needs. This award aims to increase the availability of tech in remote areas.</p>
             </section>
 
             <section id="objectives">
                 <h3>Technical Objectives</h3>
-                <ul>
-                    <li><strong>API Integration:</strong> Proposals must demonstrate standardized real-time data sharing with global health security networks.</li>
-                    <li><strong>LMIC Manufacturing:</strong> Priority is given to sustainable production models within Low- and Middle-Income Countries.</li>
-                    <li><strong>7-1-7 Framework:</strong> Alignment with the 7-1-7 framework for detection and response is mandatory.</li>
+                <ul style="margin-top: 20px; padding-left: 20px;">
+                    <li style="margin-bottom: 15px;"><strong>API Integration:</strong> Use standardized APIs for real-time data sharing with health security networks.</li>
+                    <li style="margin-bottom: 15px;"><strong>LMIC Manufacturing:</strong> Priority for manufacturing models within Low- and Middle-Income Countries.</li>
+                    <li style="margin-bottom: 15px;"><strong>7-1-7 Framework:</strong> Alignment with the 7-1-7 response framework is mandatory.</li>
                 </ul>
-            </section>
-
-            <section id="eligibility">
-                <h3>Eligibility & Guidance</h3>
-                <p>This RFP is open to non-profits, academic institutions, and technical partners. We prioritize projects that demonstrate equitable access for 501(c)(3) organizations and humanitarian groups.</p>
             </section>
         </main>
 
         <aside class="sidebar">
             <h4>RFP Number</h4>
             <p>#024B</p>
-
             <h4>Application Deadline</h4>
-            <p>August 1, 2026<br><small>11:59 PM Eastern Time</small></p>
-
+            <p>August 1, 2026</p>
             <h4>Award Amount</h4>
             <p>Up to $10,000,000 USD</p>
-
-            <h4>Timeline</h4>
-            <p>Review: Sept - Oct 2026<br>Awards: Jan 2027</p>
-
-            <a href="#" class="btn-primary" style="display: block; text-align: center;">Apply Online</a>
-            <a href="BESF_RFP024B_20250506.pdf" download style="display: block; text-align: center; margin-top: 15px; font-weight: 700; text-decoration: none; color: var(--gates-blue);">Download RFP PDF</a>
+            <a href="#" class="btn-primary" style="display: block; text-align: center; margin-bottom: 15px;">Apply Online</a>
+            <a href="BESF_RFP024B_20250506.pdf" download style="display: block; text-align: center; font-weight: 700; color: var(--gates-blue); text-decoration: none;">Download RFP PDF</a>
         </aside>
     </div>
 
@@ -123,6 +87,7 @@
             <p>&copy; 2026 Bleeding Edge Scientific Foundation. All rights reserved.</p>
         </div>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
