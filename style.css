@@ -13,7 +13,7 @@
 /* --- THE FIX: INITIAL STATE --- */
 body {
     margin: 0;
-    opacity: 0; /* Page starts invisible */
+    opacity: 1; /* Page starts invisible */
     filter: blur(8px); /* Page starts blurry */
     transition: opacity 0.6s ease-in-out, filter 0.8s ease-in-out;
     font-family: 'Noto Sans', sans-serif;
